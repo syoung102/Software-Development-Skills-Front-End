@@ -1,0 +1,11 @@
+// THe browerse doesn't read a CSS file : Using node - sass
+// scss file compiled into regular CSS and put it main.css (don't want to touch main.css file)
+// scss 파일을 일반 css 파일로 컴파일 하여 main.css에 넣는다
+
+
+$primary-color: #444; // create variable using $
+
+body{
+    background: $primary-color;
+    color: #fff;
+}
