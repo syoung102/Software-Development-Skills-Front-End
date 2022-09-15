@@ -2,10 +2,78 @@
 // scss file compiled into regular CSS and put it main.css (don't want to touch main.css file)
 // scss 파일을 일반 css 파일로 컴파일 하여 main.css에 넣는다
 
+@import 'config';
 
-$primary-color: #444; // create variable using $
+* {
+    box-sizing: border-box;
+}
+
 
 body{
+    @include background();
     background: $primary-color;
     color: #fff;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, 
+    Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+// Headings
+h1, h2, h3{
+    margin: 0;
+    font-weight: 400;
+
+    &.lg-heading{ // don't have to h1.lg-heading
+        // not nested => & using
+        font-size: 6rem; // default font: 16pixel * 6
+    }
+
+    &.sm-heading{
+        margin-bottom: 2rem; //32 pixel
+        // btw sm-heading and icons
+        padding: 0.2rem 1rem; // left right
+        background: rgba(lighten($primary-color, 2),0.5);
+    }    
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    z-index: 2; // how close to you
+    width: 100%
+}
+
+.text-secondary {
+    color: $secondary-color;
+}
+
+main {
+    padding: 4rem;
+    height: 100%;
+
+    .icons { // affect the class of icons insid of a main tag
+        margin-top: 1rem;
+
+        a {
+            padding: 0.4rem;
+
+            &:hover { // a:hover 마우스 대면 색 바뀜
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+
+    &#home { // id
+        overflow: hidden;
+        h1 {
+            margin-top: 20vh; // 100vh : full
+        }
+    }
 }

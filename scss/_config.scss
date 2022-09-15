@@ -1,0 +1,31 @@
+$primary-color: #444; // create variable using $
+$secondary-color: #eece1a;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.7;
+
+@mixin easeOut{ // function
+    transition: all 0.5s ease-out;
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-img{
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &:after { // not int HTML, but the CSS treats it like an actual elemnet
+                content: "";
+                position: absolute;
+                // cover the entire
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, $background-opacity);
+            }
+        }
+    }
+}
