@@ -3,6 +3,7 @@
 // scss 파일을 일반 css 파일로 컴파일 하여 main.css에 넣는다
 
 @import 'config';
+@import 'menu';
 
 * {
     box-sizing: border-box;
@@ -57,7 +58,7 @@ main {
     padding: 4rem;
     height: 100%;
 
-    .icons { // affect the class of icons insid of a main tag
+    .icons { // affect the class of icons inside of a main tag
         margin-top: 1rem;
 
         a {
