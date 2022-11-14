@@ -1,5 +1,5 @@
 $primary-color: #444; // create variable using $
-$secondary-color: #eece1a;
+$secondary-color: #fb9798;
 $show-home-image: true;
 $home-image: url(../img/background.jpg);
 $background-opacity: 0.7;
@@ -27,5 +27,33 @@ $background-opacity: 0.7;
                 background: rgba($primary-color, $background-opacity);
             }
         }
+    }
+}
+
+
+// Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        // Any css I put in inside of here will only apply if the screen is 500 px
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        // between 769px and 1170px
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
     }
 }
