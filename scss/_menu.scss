@@ -36,3 +36,102 @@
 
     }
 }
+
+// Menu Overlay
+.menu {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+    visibility: hidden; // menu hidden
+
+    &.show {
+        visibility: visible;
+    }
+
+    &-branding, // .menu-branding
+    &-nav {
+        display: flex;
+        flex-flow: column wrap; // up and down
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &-nav {
+        margin: 0;
+        padding: 0;
+        background: darken($primary-color, 4);
+        list-style: none;
+        
+        transform: translate3d(0, -100%, 0); // pushing down -100%
+        @include easeOut;
+        &.show {
+            // Slide in from top
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    // Branding Side
+    &-branding {
+        background: $primary-color;
+        @include easeOut;
+        transform: translate3d(0, 100%, 0);
+        &.show {
+            // Slide in from top
+            transform: translate3d(0, 0, 0);
+        }
+
+        .portrait {
+            width: 250px;
+            height: 250px;
+            background: url('../img/portrait.jpg');
+            background-size: cover;
+            background-position: center center;
+            border-radius: 50%;
+            border: solid 3px $secondary-color;
+        }
+    }
+
+    .nav-item {
+        transform: translate3d(600px, 0, 0); // left and right
+        @include easeOut;
+
+        &.show {
+            // Slide in from right
+            transform: translate3d(0, 0, 0);
+        }
+
+        &.current > a { // we want the link
+            color: $secondary-color;
+        }
+    }
+
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        font-weight: 300;
+        color: #fff;
+        text-decoration: none;
+        @include easeOut;
+
+        &:hover {
+            color: $secondary-color;
+        }
+    }
+}
+
+    
+
+// Delay each nav items slide by 0.1s
+@for $x from 1 through 4 { // for(let x =0; i < 4; i++) 
+    .nav-item:nth-child(#{$x}) { // wrap x in a number sign
+        transition-delay: $x * 0.1s;
+    }
+}
