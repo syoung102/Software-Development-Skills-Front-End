@@ -1,0 +1,103 @@
+$primary-color: rgb(255, 251, 242);
+$secondary-color: rgb(255, 132, 132);
+
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.7;
+
+@mixin easeOut {
+    transition: all 0.5s ease-out;
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-img { 
+            // <body id="bg-img">
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &:after {
+                content:'';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, $background-opacity);
+            }
+        }
+    }
+}
+
+* {
+    box-sizing: border-box;
+    // 테두리와 안쪽 여백의 크기도 요소의 크기로 고려
+}
+
+body {
+    @include background();
+    background: $primary-color;
+    color: #333;
+    height: 100%;
+    margin: 0;
+    font-family:Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    font-weight: 500;
+
+    &.lg-heading { // <h1 class="lg-heading">
+        font-size: 5rem;
+    }    
+
+    &.sm-heading { // <h2 class="sm-heading">
+        margin-bottom: 2rem;
+        padding: 0.2rem 1rem; // up-donw, left-right
+        background: rgba(darken($primary-color, 2), 0.5);
+        // background: darken($primary-color, 2);
+    }
+
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+header {
+    position: fixed; // menu button fixed
+    z-index: 2; // always front
+    width: 100%;
+}
+
+.text-secondary { // <span class="text-secondary">
+    color: $secondary-color;
+}
+
+main {
+    padding: 5rem; // up, down, left, right
+    height: 100%;
+
+    .icons { // <main id="home"> -> <div class="icons">
+        a {
+            padding: 0.5rem;
+
+            &:hover {
+                color: $secondary-color;
+                @include easeOut();
+            }
+        }
+    }
+
+
+    &#home { // <main id="home">
+        overflow: hidden; // 요소내의 컨텐츠가 너무 커서 요소내에 모두 보여주기 힘들때 그것을 어떻게 보여줄지를 지정
+        h1 {
+            margin-top: 20vh;
+        }
+    }
+}
