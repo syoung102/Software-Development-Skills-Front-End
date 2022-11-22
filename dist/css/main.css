@@ -145,7 +145,7 @@ header {
 
 main {
   padding: 5rem;
-  min-height: calc(100vh-60px); }
+  min-height: calc(100vh - 60px); }
   main .icons a {
     padding: 0.5rem; }
     main .icons a:hover {
@@ -203,6 +203,59 @@ main {
       background: #fb9798;
       color: #333; }
 
+.activities {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .activities img {
+    width: 100%;
+    border: 3px #fff solid; }
+    .activities img:hover {
+      border-color: #fb9798;
+      transform: scale(1.2);
+      transition: all 0.5s ease-out; }
+  .activities P {
+    margin-top: 0.3rem;
+    margin-bottom: 0.4rem; }
+
+.traveling {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: repeat(3, 1fr); }
+  .traveling img {
+    width: 100%;
+    border: 2px #fff solid; }
+  .traveling .btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    background: #c4c4c4;
+    color: #333; }
+    .traveling .btn:hover {
+      background: #fb9798;
+      color: #333;
+      transition: all 0.5s ease-out; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: conter;
+  margin-top: 1rem; }
+  .boxes div {
+    font-size: 2rem;
+    border: 3px #fff solid;
+    padding: 1.5rem 2.5rem;
+    margin-bottom: 3rem;
+    transition: all 0.5s ease-out; }
+    .boxes div:hover {
+      transform: scale(1.1);
+      background: #fb9798;
+      color: #333; }
+      .boxes div:hover span {
+        color: #333; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -211,11 +264,13 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
-  .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+  .activities {
+    grid-template-columns: repeat(4, 1fr); }
+  .about-studying .my-image {
+    width: 80%; } }
 
 @media screen and (min-width: 900px) and (max-width: 1170px) {
-  .projects {
+  .activities {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (min-width: 790px) and (max-width: 899px) {
@@ -238,15 +293,20 @@ main {
       width: 150px;
       height: 150px; }
   .course h3 {
-    height: 80px; } }
+    height: 80px; }
+  .activities {
+    grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 789px) {
   main {
     align-items: center;
-    text-align: center; }
+    text-align: center;
+    padding: 5rem 0rem; }
     main .lg-heading {
       line-height: 1;
       margin-bottom: 1rem; }
+  h1.lg-heading, h2.lg-heading, h3.lg-heading {
+    font-size: 4.4rem; }
   ul.menu-nav,
   div.menu-branding {
     float: none;
@@ -267,7 +327,9 @@ main {
       height: 150px; }
   .about-studying {
     grid-template-areas: 'myimage' 'info' 'info' 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9';
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .activities {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main {
@@ -276,6 +338,9 @@ main {
       margin-top: 10vh; }
     main .lg-heading {
       margin-top: 1rem;
-      font-size: 5rem; }
-  .projects {
+      font-size: 4rem; }
+  .about-studying {
+    grid-template-areas: 'myimage' 'info' 'info' 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9';
+    grid-template-columns: 1fr; }
+  .activities {
     grid-template-columns: 1fr; } }
