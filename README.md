@@ -26,7 +26,7 @@ https://syoung102.github.io/Software-Development-Skills-Front-End/
 
 <br>
 
-### A video of your project running
+### A video of my project running
 https://user-images.githubusercontent.com/88052367/203197016-c4c01f17-a972-4306-9d29-37760162d24c.mp4
 
 
