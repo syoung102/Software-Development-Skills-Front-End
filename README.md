@@ -1,7 +1,6 @@
 # Software Development Skills: Front-End
 ### 001101681 Seoyoung Yun
 Module tasks is in the Module_task folder.
-The Project task is in the Final project folder.
 
 <br>
 
@@ -24,4 +23,12 @@ https://syoung102.github.io/Software-Development-Skills-Front-End/
 
 ### Learning Diary
 [learning_diary_front_end.pdf](https://github.com/syoung102/Software-Development-Skills-Front-End/files/10062307/learning_diary_front_end.pdf)
+
+<br>
+
+### A video of your project running
+https://user-images.githubusercontent.com/88052367/203197016-c4c01f17-a972-4306-9d29-37760162d24c.mp4
+
+
+
 
