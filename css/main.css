@@ -267,10 +267,14 @@ main {
   .activities {
     grid-template-columns: repeat(4, 1fr); }
   .about-studying .my-image {
-    width: 80%; } }
+    width: 80%; }
+  .traveling {
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 900px) and (max-width: 1170px) {
   .activities {
+    grid-template-columns: repeat(4, 1fr); }
+  .traveling {
     grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 790px) and (max-width: 899px) {
@@ -295,6 +299,8 @@ main {
   .course h3 {
     height: 80px; }
   .activities {
+    grid-template-columns: repeat(3, 1fr); }
+  .traveling {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 789px) {
@@ -329,6 +335,8 @@ main {
     grid-template-areas: 'myimage' 'info' 'info' 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9';
     grid-template-columns: 1fr; }
   .activities {
+    grid-template-columns: repeat(2, 1fr); }
+  .traveling {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
@@ -343,4 +351,6 @@ main {
     grid-template-areas: 'myimage' 'info' 'info' 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9';
     grid-template-columns: 1fr; }
   .activities {
+    grid-template-columns: 1fr; }
+  .traveling {
     grid-template-columns: 1fr; } }
