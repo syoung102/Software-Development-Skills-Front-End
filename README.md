@@ -1,7 +1,6 @@
 # Software Development Skills: Front-End
 ### 001101681 Seoyoung Yun
 Module tasks is in the Module_task folder.
-The Project task is in the Final project folder.
 
 <br>
 
