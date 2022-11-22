@@ -351,7 +351,7 @@ main {
       margin-top: 1rem;
       font-size: 4rem; }
   .nav-item .nav-link {
-    font-size: 22px; }
+    font-size: 25px; }
   .about-studying {
     grid-template-areas: 'myimage' 'info' 'info' 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9';
     grid-template-columns: 1fr; }
