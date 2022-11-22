@@ -1,0 +1,69 @@
+$primary-color: #444; // create variable using $
+$secondary-color: #fb9798;
+$show-home-image: true;
+$home-image: url(../img/background.jpg);
+$background-opacity: 0.7;
+
+@mixin easeOut{ // function
+    transition: all 0.5s ease-out;
+}
+
+@mixin background {
+    @if $show-home-image {
+        &#bg-img{
+            background: $home-image;
+            background-attachment: fixed;
+            background-size: cover;
+
+            &:after { // not int HTML, but the CSS treats it like an actual elemnet
+                content: "";
+                position: absolute;
+                // cover the entire
+                top: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+                background: rgba($primary-color, $background-opacity);
+            }
+        }
+    }
+}
+
+// Set Text Color
+@function set-text-color($color) {
+    @if (lightness($color) > 40) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
+
+
+// Media Query Mixins
+@mixin mediaSm {
+    @media screen and (max-width: 500px) {
+        // Any css I put in inside of here will only apply if the screen is 500 px
+        @content;
+    }
+}
+
+@mixin mediaMd {
+    @media screen and (max-width: 768px) {
+        @content;
+    }
+}
+
+@mixin mediaLg {
+    @media screen and (min-width: 769px) and (max-width: 1170px) {
+        // between 769px and 1170px
+        @content;
+    }
+}
+
+@mixin mediaXl {
+    @media screen and (min-width: 1171px) {
+        @content;
+    }
+}

@@ -1,24 +1,23 @@
 {
   "name": "software-development-skills-front-end",
   "version": "1.0.0",
-  "description": "exchangestudent",
+  "description": "Responsive portfolio website",
   "main": "index.js",
-  "homepage": "https://syoung102.github.io/Software-Development-Skills-Front-End/",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-    "deploy": "gh-pages -d dist"
+
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/syoung102/Software-Development-Skills-Front-End.git"
   },
-  "author": "Seoyoung Yun",
+  "author": "Seoyoung",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/syoung102/Software-Development-Skills-Front-End/issues"
   },
+  "homepage": "https://github.com/syoung102/Software-Development-Skills-Front-End#readme",
   "dependencies": {
     "gh-pages": "^4.0.0",
-    "node-sass": "^8.0.0"
+    "node-sass": "^7.0.1"
   }
 }

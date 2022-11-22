@@ -126,6 +126,10 @@
         'course7' 'course8' 'course9';
 
         grid-template-columns: 1fr;
+
+        .my-image {
+            width: 70%;
+        }
     }
 
     .activities {
@@ -139,6 +143,7 @@
 
 // Smartphone
 @include mediaSm {
+
     main {
         padding: 2rem;
         #home h1 {
@@ -159,6 +164,10 @@
         'course7' 'course8' 'course9';
 
         grid-template-columns: 1fr;
+
+        .my-image {
+            width: 70%;
+        }
     }
 
     .activities {
