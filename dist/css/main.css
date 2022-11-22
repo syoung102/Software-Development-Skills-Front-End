@@ -192,16 +192,17 @@ main {
     background: #535353;
     padding: 0.5rem;
     border-bottom: #fb9798 5px solid; }
-  .about-studying .btn-light {
+  .about-studying .btn-sheet {
     bottom: 0px;
     display: block;
     padding: 0.5rem 1rem;
     border: 0;
     background: #c4c4c4;
     color: #333; }
-    .about-studying .btn-light:hover {
+    .about-studying .btn-sheet:hover {
       background: #fb9798;
-      color: #333; }
+      color: #333;
+      transition: all 0.5s ease-out; }
 
 .activities {
   display: grid;
@@ -267,11 +268,15 @@ main {
   .activities {
     grid-template-columns: repeat(4, 1fr); }
   .about-studying .my-image {
-    width: 80%; } }
+    width: 80%; }
+  .traveling {
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 900px) and (max-width: 1170px) {
   .activities {
-    grid-template-columns: repeat(3, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .traveling {
+    grid-template-columns: repeat(4, 1fr); } }
 
 @media screen and (min-width: 790px) and (max-width: 899px) {
   ul.menu-nav,
@@ -295,6 +300,8 @@ main {
   .course h3 {
     height: 80px; }
   .activities {
+    grid-template-columns: repeat(3, 1fr); }
+  .traveling {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 789px) {
@@ -329,6 +336,8 @@ main {
     grid-template-areas: 'myimage' 'info' 'info' 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9';
     grid-template-columns: 1fr; }
   .activities {
+    grid-template-columns: repeat(2, 1fr); }
+  .traveling {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
@@ -343,4 +352,6 @@ main {
     grid-template-areas: 'myimage' 'info' 'info' 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9';
     grid-template-columns: 1fr; }
   .activities {
+    grid-template-columns: 1fr; }
+  .traveling {
     grid-template-columns: 1fr; } }
