@@ -335,6 +335,8 @@ main {
   .about-studying {
     grid-template-areas: 'myimage' 'info' 'info' 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9';
     grid-template-columns: 1fr; }
+    .about-studying .my-image {
+      width: 70%; }
   .activities {
     grid-template-columns: repeat(2, 1fr); }
   .traveling {
@@ -351,6 +353,8 @@ main {
   .about-studying {
     grid-template-areas: 'myimage' 'info' 'info' 'course1' 'course2' 'course3' 'course4' 'course5' 'course6' 'course7' 'course8' 'course9';
     grid-template-columns: 1fr; }
+    .about-studying .my-image {
+      width: 70%; }
   .activities {
     grid-template-columns: 1fr; }
   .traveling {
