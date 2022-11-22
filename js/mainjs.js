@@ -1,14 +1,14 @@
-// Select DOM Items (Document Object Model)
-
+// <div class="menu-btn">
 const menuBtn = document.querySelector('.menu-btn');
+// <nav class="menu">
 const menu = document.querySelector('.menu');
+// <ul class="menu-nav">
 const menuNav = document.querySelector('.menu-nav');
+// <div class="menu-branding">
 const menuBranding = document.querySelector('.menu-branding');
-// Selector just grab the first one
-// We need to take all of those elements
+// <li class="nav-item">
 const navItems = document.querySelectorAll('.nav-item');
 
-// Set Initial Stat Of Menu
 let showMenu = false;
 
 menuBtn.addEventListener('click', toggleMenu);
@@ -19,23 +19,16 @@ function toggleMenu(){
         menu.classList.add('show');
         menuNav.classList.add('show');
         menuBranding.classList.add('show');
-        navItems.forEach(item => item.classList.add
-        ('show'));
-        
-        // Show Menu State
+        navItems.forEach(item => item.classList.add('show'));
         showMenu = true;
+
     } else{
         menuBtn.classList.remove('close');
         menu.classList.remove('show');
         menuNav.classList.remove('show');
         menuBranding.classList.remove('show');
-        navItems.forEach(item => item.classList.remove
-        ('show'));
+        navItems.forEach(item => item.classList.remove('show'));
 
         showMenu = false;
     }
 }
-
-
-
-
